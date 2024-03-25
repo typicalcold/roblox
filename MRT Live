@@ -15,8 +15,8 @@ local running = false
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "Midnight Racing Tokyo autofarm",
-   LoadingTitle = "Loading stealth MRT farm",
+   Name = "MRT autofarm - by ColdSnow - discord.gg/pm5Fj6tjv2 ",
+   LoadingTitle = "Loading blatant MRT farm",
    LoadingSubtitle = "by ColdSnow",
    ConfigurationSaving = {
       Enabled = false,
