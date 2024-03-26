@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+writefile("coldsnow\\Goliath's Marathon.txt",game:HttpGet("https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data"))
+
+
+
 local list = listfiles("coldsnow")
 local savedraces = {}
 for i,v in pairs(list) do
@@ -15,8 +28,8 @@ local running = false
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "MRT autofarm - by ColdSnow - discord.gg/pm5Fj6tjv2 ",
-   LoadingTitle = "Loading blatant MRT farm",
+   Name = "Midnight Racing Tokyo autofarm",
+   LoadingTitle = "Loading stealth MRT farm",
    LoadingSubtitle = "by ColdSnow",
    ConfigurationSaving = {
       Enabled = false,
