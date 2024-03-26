@@ -1,12 +1,4 @@
 
-
-
-
-
-
-
-
-
 writefile("coldsnow\\Goliath's Marathon.txt",game:HttpGet("https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data"))
 
 
