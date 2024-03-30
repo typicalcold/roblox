@@ -157,9 +157,9 @@ local joinui = false
 
 
 
-        task.wait(22)
+        task.wait(25)
         print("attempting")
-        repeat wait(1) until workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].Body["#Weight"] -- change it to check for if Find first child.
+        repeat wait(1) until #workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren() == 1
         local mycarmodel = workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].Body["#Weight"]
         local part = game.Workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1]:GetDescendants()
         for i,v in pairs(part) do
@@ -179,17 +179,17 @@ local joinui = false
                 
         
         local connection
-        mycarmodel.parent.parent.Body["#Weight"].Anchored = true
+        --mycarmodel.parent.parent.Body["#Weight"].Anchored = true
 
         connection = runService.RenderStepped:Connect(function()
             mycarmodel.parent.parent.Body["#Weight"].Anchored = false
             mycarmodel.parent.parent:SetPrimaryPartCFrame(CFrame.new(v[1],v[2]-13,v[3])*CFrame.Angles(80, 0, 0))
-            mycarmodel.Velocity = Vector3.new(0,0,0)
+            mycarmodel.Velocity = Vector3.new(50,50,5)
             mycarmodel.RotVelocity = Vector3.new(0,0,0)
         end)
 
         --print("next", v[1],v[2]-5,v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12])
-        task.wait(.1 + (math.random(1,13)/(100+math.random(100,900))))
+        task.wait(.09 + (math.random(1,13)/(100+math.random(100,900))))
 
        
 
