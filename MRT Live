@@ -1,5 +1,5 @@
 
-writefile("coldsnow\\Goliath's Marathon.txt",game:HttpGet("https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data"))
+writefile("coldsnow\\Turnpike Uphill.txt",game:HttpGet("https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data"))
 
 
 
@@ -97,7 +97,7 @@ local joinui = false
         print(selectedpath)
         local tmppaths = loadstring(readfile("coldsnow\\"..selectedpath))()[2]
         local tmdrivelanes = tostring(string.sub(string.gsub(selectedpath,"coldsnow\\",""), 1, -5))
-        local racetype = loadstring(readfile("coldsnow\\"..selectedpath))()[1]
+        --local racetype = loadstring(readfile("coldsnow\\"..selectedpath))()[1]
         local locationpos = loadstring(readfile("coldsnow\\"..selectedpath))()[3]
         running = true
         print("ran")
@@ -107,10 +107,11 @@ local joinui = false
         
         game:GetService("ReplicatedStorage"):WaitForChild("FrameworkEvent"):FireServer(unpack(args))
         game.Players.LocalPlayer.Character.Humanoid.Health = 0
-        task.wait(4)
+        
+        task.wait(7)
         game.Players.LocalPlayer.Character:MoveTo(Vector3.new(locationpos[1],locationpos[2],locationpos[3]) + Vector3.new(0,2,0))
         joinui = true
-        wait(3)
+        wait(4)
         while joinui do
                         local success, ErrorStatement = pcall(function()print(game:GetService("Players").LocalPlayer.PlayerGui.EventGui.Main.PlayerCount.Text) end)
             while not success do
@@ -179,12 +180,12 @@ local joinui = false
                 
         
         local connection
-        --mycarmodel.parent.parent.Body["#Weight"].Anchored = true
+        mycarmodel.parent.parent.Body["#Weight"].Anchored = true
 
         connection = runService.RenderStepped:Connect(function()
             mycarmodel.parent.parent.Body["#Weight"].Anchored = false
             mycarmodel.parent.parent:SetPrimaryPartCFrame(CFrame.new(v[1],v[2]-13,v[3])*CFrame.Angles(80, 0, 0))
-            mycarmodel.Velocity = Vector3.new(50,50,5)
+            mycarmodel.Velocity = Vector3.new(50,10,50)
             mycarmodel.RotVelocity = Vector3.new(0,0,0)
         end)
 
