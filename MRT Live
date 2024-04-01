@@ -190,7 +190,7 @@ local joinui = false
         end)
 
         --print("next", v[1],v[2]-5,v[3],v[4],v[5],v[6],v[7],v[8],v[9],v[10],v[11],v[12])
-        task.wait(.09 + (math.random(1,13)/(100+math.random(100,900))))
+        task.wait(.087 + (math.random(1,13)/(100+math.random(100,900))))
 
        
 
