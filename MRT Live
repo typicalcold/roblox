@@ -1,15 +1,10 @@
 
-writefile("coldsnow\\Turnpike Uphill.txt",game:HttpGet("https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data"))
+
+local selectedpath = loadstring(game:HttpGet('https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data'))()
 
 
 
-local list = listfiles("coldsnow")
-local savedraces = {}
-for i,v in pairs(list) do
-    table.insert(savedraces,string.sub(string.gsub(v,"coldsnow\\",""), 1, -1))
-end
 
-local selectedpath = ""
 local runService = game:GetService("RunService")
 
 
@@ -79,26 +74,16 @@ local Toggle = Tab:CreateToggle({
     end,
  })
 
- local Dropdown = Tab:CreateDropdown({
-    Name = "Races",
-    Options = savedraces,
-    CurrentOption = {"Select one"},
-    MultipleOptions = false,
-    Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-    Callback = function(Option)
-print(Option[1])
- selectedpath = Option[1]
-    end,
- })
+
 
 local joinui = false
  while wait(1) do
     if globalenabled  and not running and selectedpath ~= "" then
         print(selectedpath)
-        local tmppaths = loadstring(readfile("coldsnow\\"..selectedpath))()[2]
-        local tmdrivelanes = tostring(string.sub(string.gsub(selectedpath,"coldsnow\\",""), 1, -5))
+        local tmppaths = selectedpath[2]
+        local tmdrivelanes = "Turnpike Uphill"
         --local racetype = loadstring(readfile("coldsnow\\"..selectedpath))()[1]
-        local locationpos = loadstring(readfile("coldsnow\\"..selectedpath))()[3]
+        local locationpos = selectedpath[3]
         running = true
         print("ran")
         local args = {
@@ -171,7 +156,7 @@ local joinui = false
         for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
             if v:IsA("BasePart") then
                 v.CanCollide = false
-            end
+            end 
         end
 
         for i,v in pairs(tmppaths) do
