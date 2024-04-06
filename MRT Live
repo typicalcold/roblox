@@ -169,7 +169,7 @@ local joinui = false
 
         connection = runService.RenderStepped:Connect(function()
             mycarmodel.parent.parent.Body["#Weight"].Anchored = false
-            mycarmodel.parent.parent:SetPrimaryPartCFrame(CFrame.new(v[1],v[2]-11,v[3])*CFrame.Angles(80, 0, 0))
+            mycarmodel.parent.parent:SetPrimaryPartCFrame(CFrame.new(v[1],v[2]-13,v[3])*CFrame.Angles(80, 0, 0))
             mycarmodel.Velocity = Vector3.new(0,0,0)
             mycarmodel.RotVelocity = Vector3.new(0,0,0)
         end)
