@@ -143,7 +143,7 @@ local joinui = false
 
 
 
-        task.wait(25)
+        task.wait(30)
         print("attempting")
         repeat wait(1) until #workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren() == 1
         local mycarmodel = workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].Body["#Weight"]
