@@ -148,6 +148,7 @@ local joinui = false
         repeat wait(1) until #workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren() == 1
         local mycarmodel = workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].Body["#Weight"]
         local part = game.Workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1]:GetDescendants()
+workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].PrimaryPart = workspace.VehiclesFolder[game.Players.LocalPlayer.Name]:GetChildren()[1].Body.Seat1
         for i,v in pairs(part) do
             if v:IsA("BasePart") then
                 v.CanCollide = false
