@@ -14,8 +14,8 @@ _G.noclipCam = true
 
     
 game.StarterGui:SetCore("SendNotification", {
-Title = "AutoFarm made by ColdSnow "; 
-Text = "PMEBGE tree autofarm fast. pls like or give rep"; 
+Title = "AutoFarm made by ColdSnow PATCHED"; 
+Text = "PMEBGE tree autofarm fast. PATCHED FOR NOW"; 
 
 Duration = 69; 
 })
