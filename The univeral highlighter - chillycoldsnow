@@ -5,17 +5,13 @@ my Discord server: https://discord.gg/6fv3FUbdRV
 local RunService = game:GetService("RunService")
 local version = 1
 cleardrawcache()
-if not isfile("ChillyInfiltrator.txt") then
-        appendfile("ChillyInfiltrator.txt",game:HttpGet(('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua'))) -- https://docs.sirius.menu/community/arrayfield/interaction/interactive-elements
-else
 
-end
 
-local lib = loadstring(readfile("ChillyInfiltrator.txt"))()
+local lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/UI-Interface/ArrayField/main/Source.lua')))()
 local Window = lib:CreateWindow({
-	Name = "The universal highlighter Chilly Infiltrator - By chillycoldsnow",
-	LoadingTitle = " The univeral highlighter Chilly Infiltrator - By chillycoldsnow",
-	LoadingSubtitle = "By chillycoldsnow",
+	Name = "The universal highlighter - chillycoldsnow",
+	LoadingTitle = "By chillycoldsnow",
+	LoadingSubtitle = "By coldsnow",
 	ConfigurationSaving = {
 	   Enabled = true,
 	   FolderName = nil, -- Create a custom folder for your hub/game
