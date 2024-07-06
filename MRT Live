@@ -15,7 +15,7 @@ local running = false
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/UI-Interface/CustomFIeld/main/RayField.lua'))()
 
 local Window = Rayfield:CreateWindow({
-   Name = "MRT farm MAY BE DETECTED - discord.gg/pm5Fj6tjv2",
+   Name = "MRT farm IS DETECTED 100% - discord.gg/pm5Fj6tjv2",
    LoadingTitle = "Loading blatant MRT farm",
    LoadingSubtitle = "by ColdSnow",
    ConfigurationSaving = {
