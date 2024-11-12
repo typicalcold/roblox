@@ -1,3 +1,6 @@
+game.Players.LocalPlayer:Kick("Script is outdated and will not work")
+
+
 _G.enabled = true -- Enable autofarm or not
 
 _G.autoclicker = true 
