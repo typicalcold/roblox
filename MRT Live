@@ -1,4 +1,5 @@
 
+game.Players.LocalPlayer:Kick("This script is working but is currently detected, updated version can be found in the discord server!")
 
 local selectedpath = loadstring(game:HttpGet('https://raw.githubusercontent.com/typicalcold/roblox/main/MRT%20Live%20ichikawa%20data'))()
 
